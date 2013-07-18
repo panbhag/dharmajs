@@ -1,0 +1,80 @@
+<form class="form-horizontal" id="createEmail" data-validate="parsley">
+        <div class="control-group">
+            <label class="control-label" for="inputDisplayText">Display text:</label>
+            <div class="controls">
+            <input type="text" id="inputDisplayText" placeholder="Enter display text here" class="input-block-level" data-trigger="change" data-required="true" name="name" data-bind="value: emailMaster.name">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Description">Default Subject:</label>
+            <div class="controls">
+            	<input type="text" id="inputDisplaySubject" placeholder="Enter Subject here" class="input-block-level" type="email" data-trigger="change" data-required="true" name="email" data-bind="value: emailMaster.defaultSubject">
+           
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputCompanyrName">Default Text:</label>
+            <div class="controls">
+            <textarea rows="3" id="inputDisplayText" placeholder="Enter text here " data-trigger="change" data-required="true" name="email" data-bind="value: emailMaster.defaultText"></textarea>
+            </div>
+        </div> 
+        <div class="control-group">
+            <label class="control-label" for="inputCompanyrName">Email</label>
+            <div class="controls">
+            <input type="text" id="email" placeholder="abc@example.com"  class="input-block-level" data-type="email" data-trigger="change" data-required="true" name="email" data-bind="value: emailMaster.email">
+            </div>
+        </div>
+              
+        <div class="control-group">
+                    <div class="controls">
+                    <label class="checkbox">
+                    <input type="checkbox" data-bind="checked: emailMaster.showcaseFlag"  data-group="mygroup"> Showcase
+                    </label>
+                    </div>
+                </div>
+                <ul class="thumbnails">
+                    <li class="span3">
+                        <a href="#" class="thumbnail">
+                       	<img src="img/pics/image.jpg" id="photo">
+                        </a>
+                    </li>
+                   <li class="span9">
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input span3 image_width"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span>
+                                </div>
+                                <span class="btn btn-file"><span class="fileupload-new">Upload Image</span>
+                                <!-- <span class="fileupload-exists">Change</span> -->
+                                <input type="file" id="fileupload" name="upload" multiple="false"/></span>
+                                <!-- <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a> -->
+                            </div>
+                        </div>
+                        <!-- ko if: emailMaster.showcaseFlag -->
+                        <div class="control-group">
+                            <label class="control-label">Title</label>
+                            <div class="controls">
+                            <input type="text" id="url" class="input-block-level label_allign" placeholder="Enter showcase title">
+                   			</div>
+                		</div>
+                        <div class="control-group">
+                            <label class="control-label">Sub title</label>
+                            <div class="controls">
+                            <input type="text" id="url" class="input-block-level label_allign" placeholder="Enter showcase sub title">
+                   			</div>
+                		</div>
+                        <!-- /ko -->                    
+                        
+                   </li>
+                </ul>
+      <div class="control-group noma">
+                    <div class="controls">
+                    <button class="btn btn-large btn-danger" type="button" data-bind="click: saveEmailMaster">Add</button>
+                    <button class="btn btn-large btn-danger" type="button" data-bind="click:cancel">Cancel</button>
+                    </div>
+                </div>
+       
+</form>
+
+
+
+

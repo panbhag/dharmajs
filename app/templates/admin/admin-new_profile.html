@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S3 - Admin Dashboard</title>
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+<link href="css/styles.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body>
+<header>
+<div class="logo"></div>
+<div class="logout"><a href="#" data-toggle="tooltip" title="Logout"><img src="img/logout.png" alt="Logout" title="Logout"></a></div>
+</header>
+<section class="row-fluid content">
+ <div class="span12">
+ <h1>Create <i>a New</i> Client Profile</h1>
+<div class="create-form">
+<form class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputUserName">User Name:</label>
+            <div class="controls">
+            <input type="text" id="inputUserName" placeholder="Enter user name" class="input-block-level">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputPassword">Password:</label>
+            <div class="controls">
+            <input type="password" id="inputPassword" placeholder="Enter password" class="input-block-level">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputCompanyrName">Company Name:</label>
+            <div class="controls">
+            <input type="text" id="inputCompanyName" placeholder="Enter company name" class="input-block-level">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputWebsite">Company Website:</label>
+            <div class="controls">
+            <input type="text" id="inputWebsite" placeholder="Enter company website" class="input-block-level">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputCompanyEmail">Company Email Id:</label>
+            <div class="controls">
+            <input type="text" id="inputCompanyEmail" placeholder="Enter company email id" class="input-block-level">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputPhoneNumber">Phone Number:</label>
+            <div class="controls">
+            <input type="text" id="inputPhoneNumber" placeholder="Enter phone number" class="input-block-level">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputAddressDetails">Address Details:</label>
+            <div class="controls">
+            <textarea rows="3" id="inputAddressDetails" placeholder="Enter address details" class="input-block-level"></textarea>
+            </div>
+        </div> 
+        <button class="btn btn-primary btn-danger btn-large pull-right"  aria-hidden="true">Submit</button>
+        <a href="admin-dashboard.html" role="button" class="btn  pull-left btn-large" data-toggle="modal">Cancel</a>
+       
+</form>
+<div class="clearfix"></div>
+</div>
+  </div>
+</section>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$('#element').tooltip('show')
+</script>
+</body>
+</html>

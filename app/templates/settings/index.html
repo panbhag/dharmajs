@@ -1,0 +1,45 @@
+<script>
+	$(document).ready(function(){
+		
+			$(".option").click(function () {
+        
+		        var value = $("#select option:selected").val();
+		        if(value == 'Email'){
+		        	App.views.setLocation("#/email_masters");
+		        }
+		        if(value == 'Links'){
+		        	App.views.setLocation("#/link_masters");		        	
+		        }
+		        if(value == 'Call'){
+		        	App.views.setLocation("#/call_masters");
+		        }
+		        
+		        if(value == 'Sms'){
+		        	App.views.setLocation("#/sms_masters");
+		        }
+		        if(value == 'Audio'){
+		        	App.views.setLocation("#/audio_masters");
+		        }
+		        if(value == 'Video'){
+		        	App.views.setLocation("#/video_masters");
+		        }
+		        if(value == 'Buy'){
+		        	App.views.setLocation("#/buy_masters");
+		        }
+		        if(value == 'Share'){
+		        	App.views.setLocation("#/share_masters");
+		        }
+       		});
+       });
+</script>
+<select class="input-large" id='select' name ='options' autofocus>
+	<!-- <option>Select Master</option> -->
+	<option id = 'email' class = 'option'>Email</option>
+	<option id = 'link' class = 'option'>Links</option>
+	<option id = 'call' class = 'option'>Call</option>
+	<option id = 'sms' class = 'option'>Sms</option>
+	<option id = 'audio' class = 'option'>Audio</option>
+	<option id = 'video' class = 'option'>Video</option>
+	<option id = 'buy' class = 'option'>Buy</option>
+	<!-- <option id = 'share' class = 'option'>Share</option> -->
+</select>

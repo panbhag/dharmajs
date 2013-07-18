@@ -1,0 +1,42 @@
+<form id="createForm" data-validate="parsley">
+	<table>
+		<tr>
+			<td>Display Text:</td>
+			<td>
+			<input data-trigger="change" data-required="true" type="text" name="name" data-bind="value: formData.name">
+			</td>
+		</tr>
+		<tr>
+			<td>Type:</td>
+			<td>
+			<input data-trigger="change" data-required="true" type="text" name="name" data-bind="value: formData.type">
+			</td>
+		</tr>
+		<tr>
+			<td>URL:</td>
+			<td>
+			<input data-type="url" data-trigger="change" data-required="true" type="text" name="url" data-bind="value: formData.url">
+			</td>
+		</tr>
+		<tr><td>
+		<input type="checkbox" data-bind="checked: formData.showcaseFlag"  data-group="mygroup"  /><span>Showcase</span>
+		</td></tr>
+		<!-- ko ifnot:editMode -->
+		<tr>
+			<td colspan="2">
+			<input type="checkbox" data-group="mygroup" data-bind="checked: $root.addToMasters" />
+			<span>Add to Masters</span></td>
+		</tr>
+		<!-- /ko -->
+		<tr>
+			<td></td>
+			<td><!-- ko ifnot:editMode -->
+			<input type="button" value="Index" id="indexSocial" data-bind="click: indexSocial"/>
+			<!-- /ko --><!-- ko if:editMode -->
+			<input type="button" value="Save" data-bind="click: update"/>
+			<!-- /ko -->
+			<input type="reset" data-bind="click: clear" value="Reset" />
+			</td>
+		</tr>
+	</table>
+</form>

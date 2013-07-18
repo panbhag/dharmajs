@@ -1,0 +1,10 @@
+<ul>
+	<!-- ko foreach: shareMasterList -->
+	<li style="list-style-type: none; text-align: left; margin-left: -35px;">
+<!-- 		<input type="checkbox" data-bind="attr: { value: _id }, checked: $root.selectedShareMasters"> -->
+		<span data-bind="text: name()"></span>
+		<a data-bind="attr: {value: _id}, click:$root.indexShare1" >Add</a>
+	</li>
+	<!-- /ko -->
+<!-- 	<input type="button" data-bind="click:indexShare1" value="Index" />  -->
+</ul>

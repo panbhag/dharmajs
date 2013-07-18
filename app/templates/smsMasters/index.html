@@ -1,0 +1,39 @@
+<center>
+	<div width="100%" style="background-color: #2878EC; height:34px; color:#fff">
+		<h1>Sms List<a style="float:right; padding:9px; width:40px;" class='btn1' href="#/sms_masters/new">Create</a></h1>
+	</div>
+	<br>
+	<table bordercolor="#A6B8C1" border=10 id='table' cellpadding="10">
+		<tbody>
+			<tr style= 'background-color: #D9E0E8'>
+				<th>DISPLAY TEXT</th>
+				<th>MOBILE NUMBER</th>
+				<th>DEFAULT TEXT</th>
+				<th>SHOWCASE IMAGE</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+			<!-- ko foreach: smsMasters -->
+			<tr>
+				<!-- 	 	<td data-bind="text:_id"></td> -->
+				<td data-bind="text:name"></td>
+				<td data-bind="text:number"></td>
+				<td data-bind="text:defaultText"></td>
+				<td><img class="pics" data-bind="attr:{src:'/data/smsShowcase/'+icon_url()}" /></td>
+				<td>
+				<div class='tileBtn'>
+					<div class='container'>
+						<a class="delete btn" data-bind="click: $root.deleteSmsMasters" style="text-decoration: underline; cursor: pointer;">Delete</a>
+					</div>
+				</div></td>
+				<td>
+				<div class='tileBtn'>
+					<div class='container'>
+						<a class="btn" data-bind="attr:{href:'#/sms_masters/'+_id() + '/edit'}">Edit</a>
+					</div>
+				</div></td>
+			</tr>
+			<!-- /ko-->
+		</tbody>
+	</table>
+</center>

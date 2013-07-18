@@ -1,0 +1,11 @@
+<ul>
+	<!-- ko foreach: emailMasterList -->
+	<li style="list-style-type: none; text-align: left; margin-left: -35px;">
+		<!-- <input type="checkbox" data-bind="attr: { value: _id }, checked: $root.selectedEmailMasters"> -->
+		<!-- <input type="checkbox" data-bind="attr: { value: _id }, checked: $root.selectedEmailMasters"> -->
+		<span data-bind="text: email() + ' - ' + defaultSubject()"></span>
+		<a data-bind="attr: {value: _id}, click:$root.indexEmail1" >Add</a>		
+	</li>
+	<!-- /ko -->
+
+</ul>

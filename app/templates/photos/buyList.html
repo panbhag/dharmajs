@@ -1,0 +1,13 @@
+<ul>
+	<!-- ko foreach: buyMasterList -->
+	<li style="list-style-type: none; text-align: left; margin-left: -35px;">
+<!-- 		<input type="checkbox" data-bind="attr: { value: _id }, checked: $root.selectedBuyMasters"> -->
+		<span data-bind="text: url() + ' - ' + name()"></span>
+		<a data-bind="attr: {value: _id}, click:$root.indexBuy1" >Add</a>
+		<!-- ko if: title -->
+		<a data-bind="attr: {value: _id}, click:$root.sindexBuy1" >Add with Showcase</a>
+		<!-- /ko -->
+	</li>
+	<!-- /ko -->
+<!-- 	<input type="button" data-bind="click:indexBuy1" lvalue="Index" />  -->
+</ul>

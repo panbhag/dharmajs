@@ -1,0 +1,126 @@
+<script>
+	// $('#buy').prop('checked',true);
+	// $('#call').prop('checked',true);
+	// $('#email').prop('checked',true);
+	// $('#sms').prop('checked',true);
+	// $('#video').prop('checked',true);
+	// $('#audio').prop('checked',true);
+	// $('#www').prop('checked',true);
+	// $('#image').click(function(){
+	// if ( $target.is("li") ) {
+	// $target.css("background-color", "red");
+	// }
+	// });
+	$('#location').click(function() {
+		$('#location_subgroup').show();
+	});
+	$('#time').click(function() {
+		$('#location_subgroup').hide();
+		$('#city').prop('checked', false);
+		$('#state').prop('checked', false);
+		$('#country').prop('checked', false);
+	});
+	$('#image').click(function() {
+		$('#location_subgroup').hide();
+		$('#city').prop('checked', false);
+		$('#state').prop('checked', false);
+		$('#country').prop('checked', false);
+	});	
+</script>
+<div class="row-fluid">
+	<div class="contnr">
+		<div class="controls-holder">
+			<div class="select-row">
+				<label class="checkbox inline">Call to action:</label>
+				<label class="checkbox inline">
+					<input type="checkbox" id="buy" value="option1" data-bind= "click: getCheckedList.bind('buy')" checked>
+					Buy </label>
+				<label class="checkbox inline">
+					<input type="checkbox" id="call" value="option2" data-bind= "click: getCheckedList.bind('call')" checked>
+					Call </label>
+				<label class="checkbox inline">
+					<input type="checkbox" id="email" value="option3" data-bind= "click: getCheckedList.bind('email')" checked>
+					Email </label>
+				<label class="checkbox inline">
+					<input type="checkbox" id="sms" value="option4" data-bind= "click: getCheckedList.bind('sms')" checked>
+					SMS </label>
+				<label class="checkbox inline">
+					<input type="checkbox" id="audio" value="option5" data-bind= "click: getCheckedList.bind('audio')" checked>
+					Audio </label>
+				<label class="checkbox inline">
+					<input type="checkbox" id="video" value="option6" data-bind= "click: getCheckedList.bind('video')" checked>
+					Video </label>
+				<label class="checkbox inline">
+					<input type="checkbox" id="www" value="option7" data-bind= "click: getCheckedList.bind('www')" checked>
+					WWW </label>
+			</div>
+			<div class="select-row">
+				<label class="radio inline">Group by:</label>
+				<label class="radio inline">
+					<input type="radio" name="optionsRadios1" id='image' value="option1">
+					Image </label>
+				<label class="radio inline">
+					<input type="radio" name="optionsRadios1" id="time" value="option2">
+					Time </label>
+				<label class="radio inline">
+					<input type="radio" name="optionsRadios1" id="location" value="option3">
+					Location </label>
+			</div>
+			<div class="select-row" id='location_subgroup' style='display:none;'>
+				<label class="radio inline">&nbsp;</label>
+				<label class="radio inline">
+					<input type="radio" name="optionsRadios2" id="city" value="option3">
+					City </label>
+				<label class="radio inline">
+					<input type="radio" name="optionsRadios2" id="state" value="option2">
+					State </label>
+				<label class="radio inline">
+					<input type="radio" name="optionsRadios2" id="country" value="option1">
+					Country </label>
+			</div>
+		</div>
+		<div id='table'></div>
+	</div>
+
+</div>
+
+<!--
+<div>
+<section>
+<center>
+
+<div width="100%" style="background-color: #2878EC; height:34px; color:#fff">
+<h1>Analytics DATA </h1>
+</div>
+<br>
+<br>
+
+<div id= 'action'>
+<a>Call By Action</a>
+<input id='buy' type="checkbox" name="action" value="buy" data-bind= "click: getCheckedList.bind('buy')" checked>Buy
+<input id='call' type="checkbox" name="action" value="call" data-bind= "click: getCheckedList.bind('call')" checked>Call
+<input id='email' type="checkbox" name="action" value="email" data-bind= "click: getCheckedList.bind('email')" checked>Email
+<input id='sms' type="checkbox" name="action" value="sms" data-bind= "click: getCheckedList.bind('sms')" checked>Sms
+<input id='video' type="checkbox" name="action" value="video" data-bind= "click: getCheckedList.bind('video')" checked>Video
+<input id='audio' type="checkbox" name="action" value="audio" data-bind= "click: getCheckedList.bind('audio')" checked>Audio
+<input id='www' type="checkbox" name="action" value="www" data-bind= "click: getCheckedList.bind('www')" checked>WWW<br \><br \>
+</div>
+
+<a>Group By</a>
+<input id='image' type="radio" name="group" value="image" />Image
+<input id='time'type="radio" name="group" value="time" />Time
+<input id='location' type="radio" name="group" value="location" />Location<br /><br />
+<span class='location_subgroup' style='display:none;'>
+<input id='country' type="radio" name="subgroup" value="country" />Country
+<input id='states' type="radio" name="subgroup" value="states" />States
+<input id='city' type="radio" name="subgroup" value="city" />City
+</span>
+
+</center>
+</section>
+</div>
+
+<div id="report">
+
+</div> -->
+

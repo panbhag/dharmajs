@@ -1,0 +1,26 @@
+<form id="createSocial" data-validate="parsley">
+<h1>Create Video Link</h1>
+<table>
+	<tr>
+		<td>Display Text:</td>
+		<td><input type="text" data-trigger="change" data-required="true" name="name" data-bind="value: socialMaster.name"></td>
+	</tr>	
+	<tr>
+		<td>Type:</td>
+		<td><input type="text" data-trigger="change" data-required="true" name="name" data-bind="value: socialMaster.type"></td>
+	</tr>
+	<tr>
+		<td>URL:</td>
+		<td><input type="text" data-type="url" data-trigger="change" data-required="true" name="url" data-bind="value: socialMaster.url"></td>
+	</tr>
+	<tr>
+		<td>
+		<input type="checkbox" data-bind="checked: socialMaster.showcaseFlag"  data-group="mygroup"  />
+		<span>Showcase</span></td>
+	</tr>
+	
+	<tr><td></td>
+		<td><input type="button" value="Save" id="save_video" data-bind="click: saveSocialMaster"/> <input type="button" data-bind="click:cancel" value="Cancel" /></td>
+	</tr>
+</table>
+</form>

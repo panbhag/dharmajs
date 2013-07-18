@@ -1,0 +1,46 @@
+<form id="editProfile">
+<h1>Profile Edit</h1>
+<table>
+	<tr>
+		<td>User Name:</td>
+		<!-- <td><input type="text" name="userName" data-bind="value: profile.userName"></td> -->
+		<td><label data-bind="text: profile.userName"></label></td>
+	</tr>	
+	<!-- <tr>
+		<td>Password:</td>
+		<td><input type="text" name="password" data-bind="value: profile.password"></td>
+	</tr> -->
+	<tr>
+		<td>Company Name:</td>
+		<td><input type="text" data-trigger="change" data-required="true" name="companyName" data-bind="value: profile.companyName"></td>
+	</tr>	
+	<tr>
+			<td>Company Website:</td>
+			<td>
+			<input type="text" data-type="url" data-trigger="change" data-required="true" name="companyName">
+			</td>
+	</tr>
+	<tr>
+		<td>Email Id:</td>
+		<!-- <td><input type="text" name="emailId" data-bind="value: profile.emailId"></td> -->
+		<td><label data-bind="text: profile.emailId"></label></td>
+	</tr>
+	<tr>
+		<td>Company Address:</td>
+		<td><input data-trigger="change" data-required="true" type="text" name="companyAddress" data-bind="value: profile.companyAddress"></td>
+	</tr>
+	<tr>
+			<td>Phone Number:</td>
+			<td>
+			<input type="text" data-trigger="change" data-required="true" name="emailId">
+			</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<input type="button" value="Save" id="profile_save" data-bind="click: editProfile"/> 
+			&nbsp;	<input type="button" value="Cancel" id="profile_save" data-bind="click: cancel"/>
+		</td>
+	</tr>
+</table>
+</form>

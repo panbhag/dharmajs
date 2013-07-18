@@ -1,0 +1,22 @@
+<thead>
+	<tr>
+		<th>EMAIL</th>
+		<th>DISPLAY TEXT</th>
+		<th>DEFAULT SUBJECT</th>
+		<th>SHOWCASE IMAGE</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+</thead>
+<tbody>
+	<!-- ko foreach: emailMasters -->
+	<tr>
+		<td data-bind="text:email"></td>
+		<td data-bind="text:name"></td>
+		<td data-bind="text:defaultSubject"></td>
+		<td class="pics"><img data-bind="attr:{src:'/data/emailShowcase/'+icon_url()}" /></td>
+		<td class="img"><a data-bind="attr:{href:'#/email_masters/'+_id() + '/edit'}"><img src="img/edit.png" alt="Edit"></a></td>
+		<td class="img"><a data-bind="click: $root.deleteEmailMasters"><img src="img/close.png" alt="Delete"></a></td>
+	</tr>
+	<!-- /ko-->
+</tbody>

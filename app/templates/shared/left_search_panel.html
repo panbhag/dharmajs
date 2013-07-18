@@ -1,0 +1,20 @@
+<div class="contnr">
+	<form class="form-search">
+		<input id="query" class="input-block-level" type="text" data-bind="event:{keyup:tagSearch}" placeholder="Search Tag">
+	</form>
+	<ul id="result" class="tags-holder">
+		<!--ko foreach:App.searchedTags -->
+		<li>
+			<label data-bind="text:$data"></label><span><a data-bind="click:$root.tagSelect.bind($data)"><img src="img/add-small.png" alt="Add"></a></span>
+		</li>
+		<!-- /ko -->
+	</ul>
+	<ul id='selected' class="sel-tags">
+		<!--ko foreach:App.currentTags -->
+		<li>
+			<label data-bind="text:$data"></label><span><a data-bind="click:$root.tagDelete.bind($data)"><img src="img/close-small.png" alt="Remove"></a></span>
+		</li>
+		<!-- /ko -->
+	</ul>
+</div>
+

@@ -1,0 +1,14 @@
+<ul>
+	<!-- ko foreach: callMasterList -->
+	<li style="list-style-type: none; text-align: left; margin-left: -35px;">
+<!-- 		<input type="checkbox" data-bind="attr: { value: _id }, checked: $root.selectedCallMasters"> -->
+		<span data-bind="text: number() + ' - ' + name()"></span>
+		<a data-bind="attr: {value: _id}, click:$root.indexCall1" >Add</a>
+		
+		<!-- ko if: title -->
+		<a data-bind="attr: {value: _id}, click:$root.sindexAudio1" >Add with Showcase</a>
+		<!-- /ko -->
+	</li>
+	<!-- /ko -->
+<!-- 	<input type="button" data-bind="click:indexCall1" value="Index" />  -->
+</ul>

@@ -1,0 +1,51 @@
+<form id="createCall" data-validate="parsley">
+	<h1>Create Call Link</h1>
+	<table>
+		<tr>
+			<td>Display Text:</td>
+			<td>
+			<input type="text" data-trigger="change" data-required="true"  name="pname" data-bind="value: callMaster.name">
+			</td>
+		</tr>
+		<tr>
+			<td>Phone Number:</td>
+			<td>
+			<input type="text" name="pnumber" data-trigger="change" data-required="true"  data-bind="value: callMaster.number">
+			</td>
+		</tr>
+		<tr>
+			<td>Pic URL: </td>
+			<td>
+			<input id="fileupload" type="file" name="upload" multiple="false" />
+			&nbsp; <span style="font-size:12px;color:#a0a0a0;">(Supported Formats: jpg, jpeg, png and gif)</span></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img style="max-height:100px; max-width: 50px;" id="photo"/></td>
+		</tr>
+		<tr>
+			<td>
+			<input type="checkbox" data-bind="checked: callMaster.showcaseFlag"  data-group="mygroup"  />
+			<span>Showcase</span></td>
+		</tr>
+		<!-- ko if: callMaster.showcaseFlag -->
+		<tr>
+			<td>Title:</td>
+			<td>
+			<input type="text" data-required="true" name="name" data-bind="value: callMaster.title">
+			</td>
+		</tr>
+		<tr>
+			<td>Sub-Title:</td>
+			<td>
+			<input type="text" name="url" data-bind="value: callMaster.subtitle">
+			</td>
+		</tr>
+		<!-- /ko -->
+		<tr>
+			<td></td>
+			<td>
+			<input type="button" value="Save" id="call_save" data-bind="click: saveCallMaster"/>
+			<input type="button" data-bind="click:cancel" value="Cancel" />
+			</td>
+		</tr>
+	</table>

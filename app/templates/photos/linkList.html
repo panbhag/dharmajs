@@ -1,0 +1,11 @@
+<ul>
+	<!-- ko foreach: linkMasterList -->
+	<li style="list-style-type: none; text-align: left; margin-left: -35px;">
+<!-- 		<input type="checkbox" data-bind="attr: { value: _id }, checked: $root.selectedLinkMasters"> -->
+		<span data-bind="text: url() + ' - ' + name()"></span>
+		<a data-bind="attr: {value: _id}, click:$root.indexLink1" >Add</a>
+	</li>
+	<!-- /ko -->
+	
+<!-- 	<input type="button" data-bind="click:indexLink1" value="Index" />  -->
+</ul>

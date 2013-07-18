@@ -1,0 +1,52 @@
+<form id="createBuy" data-validate="parsley">
+	<h1>Create Buy Link</h1>
+	<table>
+		<tr>
+			<td>Display Text:</td>
+			<td>
+			<input type="text" name="name" data-trigger="change" data-required="true" data-bind="value: buyMaster.name">
+			</td>
+		</tr>
+		<tr>
+			<td>URL:</td>
+			<td>
+			<input type="text" name="url" data-type="url" data-trigger="change" data-required="true" data-bind="value: buyMaster.url">
+			</td>
+		</tr>
+		<tr>
+			<td>Pic URL: </td>
+			<td>
+			<input id="fileupload" type="file" name="upload" multiple="false" />
+			&nbsp; <span style="font-size:12px;color:#a0a0a0;">(Supported Formats: jpg, jpeg, png and gif)</span></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img style="max-height:100px; max-width: 50px;" id="photo"/></td>
+		</tr>
+		<tr>
+			<td>
+			<input type="checkbox" data-bind="checked: buyMaster.showcaseFlag"  data-group="mygroup"  />
+			<span>Showcase</span></td>
+		</tr>
+		<!-- ko if: buyMaster.showcaseFlag -->
+		<tr>
+			<td>Title:</td>
+			<td>
+			<input type="text" data-required="true" name="name" data-bind="value: buyMaster.title">
+			</td>
+		</tr>
+		<tr>
+			<td>Sub-Title:</td>
+			<td>
+			<input type="text" name="url" data-bind="value: buyMaster.subtitle">
+			</td>
+		</tr>
+		<!-- /ko -->
+		<tr>
+			<td></td>
+			<td>
+			<input type="button" value="Save" id="save_buy" data-bind="click: saveBuyMaster"/>
+			<input type="button" data-bind="click:cancel" value="Cancel" />
+			</td>
+		</tr>
+	</table>
+</form>

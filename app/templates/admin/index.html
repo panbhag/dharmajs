@@ -1,0 +1,36 @@
+<div class="span12">
+ <h1>Welcome to <i>Smart Snapp</i> Admin Dashboard</h1>
+ <!--Table starts here-->
+ 
+ <div class="table-holder">
+ <h2>Client profile List</h2>
+ <a href="#/client/new" role="button" class="btn btn-large btn-danger pull-right" data-toggle="modal">Create a new profile</a>
+
+ <table class=" table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>User Name</th>
+              <th>Email Id</th>
+              <th>Phone Number</th>
+              <th>Company Website</th>
+              <th>Company Address</th>              
+              <th>Edit</th>
+              <th>Delete</th>
+           </tr>
+          </thead>
+          <tbody>
+            <!-- ko foreach: clientList --> 
+			 <tr>
+			 	<td data-bind="text:companyName"></td>
+			 	<td data-bind="text:userName"></td>
+			 	<td data-bind="text:emailId"></td>
+			 	<!-- <td data-bind="text:phoneNumber"></td>
+			 	<td data-bind="text:companyWebsite"></td> -->
+			 	<td data-bind="text:companyAddress"></td>			 	
+			 	<td class="img"><a data-bind="attr:{href:'#/client/'+_id() + '/edit'}"><img src="img/edit.png" alt="Edit"></a></td>
+				<td class="img"><a data-bind="click: $root.deleteClient"><img src="img/close.png" alt="Delete"></a></td>
+			</tr>
+			<!-- /ko-->
+    	</tbody>
+</table>

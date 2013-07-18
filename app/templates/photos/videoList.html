@@ -1,0 +1,10 @@
+<ul>
+	<!-- ko foreach: videoMasterList -->
+	<li style="list-style-type: none; text-align: left; margin-left: -35px;">
+<!-- 		<input type="checkbox" data-bind="attr: { value: _id }, checked: $root.selectedVideoMasters"> -->
+		<span data-bind="text: url() + ' - ' + name()"></span>
+		<a data-bind="attr: {value: _id}, click:$root.indexVideo1" >Add</a>
+	</li>
+	<!-- /ko -->
+<!-- 	<input type="button" data-bind="click:indexVideo1" value="Index" />  -->
+</ul>

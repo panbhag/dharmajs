@@ -1,0 +1,81 @@
+<div class="row-fluid" id='listview' style = 'display:none;'>
+	<div class="contnr">
+		<table class=" table table-bordered table-striped list-view">
+			<thead>
+				<tr>
+					<th>Display Text</th>
+					<th>Tags</th>
+					<th>Images</th>
+					<th>Index</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- ko foreach: photos-->
+				<tr>
+					<td data-bind="text:title"></td>
+					<td data-bind="text:tags"></td>
+					<td class="pic"><img data-bind="attr:{src:'/data/photos/'+picsaveName()}" /></td>
+					<td class="img"><a data-bind="attr:{href:'#/photos/'+_id()+'/indexing'}"><img src="img/call-to-action.png" alt="Index"></a></td>
+					<td class="img"><a data-bind="attr:{href:'#/photos/'+_id()+'/edit'}"><img src="img/edit.png" alt="Edit"></a></td>
+					<td class="img"><a data-bind="click: $root.deletePhoto"><img src="img/close.png" alt="Delete"></a></td>
+				</tr>
+				<!-- /ko -->
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row-fluid" id='gridview'>
+	<div class="contnr" id="container">
+		<!-- ko foreach: photos-->
+		<div class="item">
+			<div class="imgh">
+				<div class="img" ><img data-bind="attr:{src:'/data/photos/'+picsaveName()}">
+				</div>
+				<div class="content">
+					<h3 data-bind="text:title"></h3>
+					<ul class="sel-tags-inner">
+						<!--ko foreach:tags-->
+						<li data-bind="text:$data"></li>
+						<!--/ko-->
+					</ul>
+					<ul class="control">
+						<li class="pull-left">
+							<a href="#">more..</a>
+						</li>
+						<li class="pull-right">
+							<a data-bind="click: $root.deletePhoto"><img src="img/close.png" alt="Delete"></a>
+						</li>
+						<li class="pull-right">
+							<a data-bind="attr:{href:'#/photos/'+_id()+'/edit'}"><img src="img/edit.png" alt="Edit"></a>
+						</li>
+						<li class="pull-right">
+							<a data-bind="attr:{href:'#/photos/'+_id()+'/indexing'}"><img src="img/call-to-action.png" alt="Index"></a>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /ko -->
+	</div>
+</div>
+	
+<script>
+	$(document).ready(function() {
+
+		$('#grid').click(function() {
+			$('#listview').hide();
+			$('#gridview').show();
+		});
+		$('#list').click(function() {
+			$('#gridview').hide();
+			$('#listview').show();
+		});
+	});	
+	$('#element').tooltip('hide')
+	$('#ele, #grid, #list').tooltip('hide')	
+
+</script>
+

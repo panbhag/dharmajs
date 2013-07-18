@@ -1,0 +1,148 @@
+<script>
+	$(document).ready(function() {
+		
+		$("#userTagHandle").tagHandler({
+			getURL : '/search/tags',
+			queryname : "term",
+			autocomplete : true,
+			initLoad : false,
+			minChars : 2,
+			allowAdd : true,
+			placeholder : "tags"
+		});
+	});
+</script>
+
+<div class="row-fluid">
+	<form id="createForm" data-validate="parsley">
+            <div class="contnr">
+                <ul class="thumbnails">
+                    <li class="span3">
+                        <a href="#" class="thumbnail">
+                       	<img id="photo" src="img/pics/image.jpg" >
+                        </a>
+                    </li>
+                    <li class="span9">
+                    <div class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label" for="inputImageName">Title</label>
+                            <div class="controls">
+                           		 <input type="text" id="inputImageName" placeholder="Enter image name here" data-required="true" type="text" data-bind="value:Photo.title" >
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="inputTags">Tags</label>
+                            <div class="controls">
+                            	<ul id="userTagHandle" style="list-style-type: none;">
+                           		<!-- <textarea rows="3" id="inputTags" placeholder="Enter tags here"></textarea> -->
+                            </div>
+                          <!--Button Drop here-->
+                                <div class="btn-group tags">
+                                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Add existing Tags
+                                    <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu add-tags">
+                                    	<li>
+                                            <label class="checkbox">
+                                            <input type="checkbox" value="">
+                                            Guruji
+                                            </label>
+										</li>
+                                        <li>
+                                        	<label class="checkbox">
+                                            <input type="checkbox" value="">
+                                            Art of Living
+                                            </label>
+                                        </li>
+                                        <li>
+                                        	<label class="checkbox">
+                                            <input type="checkbox" value="">
+                                            Panchakarma
+                                            </label>
+                                        </li>
+                                        <li><button class="btn btn-danger btn-small" type="button">Add</button></li>
+                                    </ul>
+                                </div>
+                          <!--Button Drop Ends here-->
+                        </div>
+                        
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                            <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div>
+                            <span class="btn btn-file">
+                            	<span class="fileupload-new">Upload Image</span>
+                            	<!-- <span class="fileupload-exists">Change</span> -->
+                            	<input id="fileupload" type="file" name="upload" multiple="false" />
+                            </span>
+                            <!-- <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+                <ul class="thumbnails row-highlight">
+                    <li class="span3">
+                        <a href="#" class="thumbnail">
+                       	<img id="photo1" src="img/pics/banner.jpg">
+                        </a>
+                    </li>
+                    <li class="span9">
+                    <div class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label" for="inputImageName">Banner Title</label>
+                            <div class="controls">
+                           		 <input type="text" id="inputImageName" placeholder="Enter banner title here" data-bind="value:Photo.banner_title">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="inputTags">Sub Title</label>
+                            <div class="controls">
+                           		<input type="text" id="inputSubName" placeholder="Enter sub title here" data-bind="value:Photo.banner_subtitle">
+                            </div>
+                        </div>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                            <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div>
+                            <span class="btn btn-file">
+                            	<span class="fileupload-new">Upload Banner</span>
+                            	<!-- <span class="fileupload-exists">Change</span> -->
+                            		<input id="fileupload1" type="file" name="upload" multiple="false" />
+                            </span>
+                            <!-- <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+                <ul class="thumbnails">
+                    <li class="span3">
+                        <a href="#" class="thumbnail">
+                       	<img id="photo2" src="img/pics/logo.jpg" >
+                        </a>
+                    </li>
+                    <li class="span9">
+                    <div class="form-horizontal">
+                       <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="input-append">
+                            <div class="uneditable-input span3"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div>
+                            <span class="btn btn-file">
+                            	<span class="fileupload-new">Upload Logo</span>
+                            	<!-- <span class="fileupload-exists">Change</span> -->
+                            	<input type="file" id="fileupload2" name="upload" multiple="false" />
+                            </span>
+                            <!-- <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+                <div class="bottom-buts">
+  <button class="btn btn-danger btn-large" type="button" data-bind="click:savePhoto" >Submit</button>
+  <button class="btn btn-info btn-large" type="button" data-bind="click:indexPhoto" >Index</button>
+  <button class="btn btn-large" type="button" data-bind="click:cancel" >Cancel</button>
+                </div>
+            </div>
+            </form>
+        </div>
+

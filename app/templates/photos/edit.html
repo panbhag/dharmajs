@@ -1,0 +1,79 @@
+<form id="createForm" data-validate="parsley">
+<h1>Edit Photo</h1>
+<table bordercolor="#A6B8C1" border=10 id='table' cellpadding="10"> 
+	
+	<tbody>
+
+		<tr>
+			<td>Display text: </td>
+			<td style="text-align: left;">
+			<input data-required="true" type="text" data-bind="value:photo.title" />
+			</td>
+		</tr>
+		<tr>
+			<td>Tags: </td>
+			<td style="text-align: left;">
+			<input type="text" data-bind="value:photo.tags" />
+			</td>
+		</tr>
+		<tr>
+			<td>Banner Title: </td>
+			<td style="text-align: left;">
+			<input type="text" data-bind="value:photo.banner_title" />
+			</td>
+		</tr>
+		<tr>
+			<td>Banner Sub-Title: </td>
+			<td style="text-align: left;">
+			<input type="text" data-bind="value:photo.banner_subtitle" />
+			</td>
+		</tr>
+		<tr>
+			<td>Photo: </td>
+			<td style="text-align: left;"><input id="fileupload" type="file" name="upload" multiple="false" />
+				<br><span style="font-size:12px;color:#a0a0a0;">(Supported Formats: jpg, jpeg, png and gif)</span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<img style="max-height:150px;" data-bind="attr:{src:'/data/photos/'+ photo.picsaveName()}" id="photo"/>
+			</td>
+		</tr>
+	    <tr>
+			<td>Banner Image: </td>
+			<td style="text-align: left;"><input id="fileupload1" type="file" name="upload" multiple="false" />
+				<br><span style="font-size:12px;color:#a0a0a0;">(Supported Formats: jpg, jpeg, png and gif)</span> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<img style="max-height:150px;" data-bind="attr:{src:'/data/banners/'+ photo.banner_image()}" id="photo1"/>
+				<!-- <span data-bind="text: photo.picdisplayName()" id="dispName"></span> -->
+			</td>
+		</tr>
+		<tr>
+			<td>Banner Logo: </td>
+			<td style="text-align: left;"><input id="fileupload2" type="file" name="upload" multiple="false" />
+				<br><span style="font-size:12px;color:#a0a0a0;">(Supported Formats: jpg, jpeg, png and gif)</span> 
+				
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<img style="max-height:150px;" data-bind="attr:{src:'/data/logos/'+ photo.brand_logo()}" id="photo2"/>
+				<!-- <span data-bind="text: photo.picdisplayName()" id="dispName"></span> -->
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<input type="button" data-bind="click:editPhoto" value="Save" />
+			<input type="button" data-bind="click:cancel" value="Cancel" />
+			</td>
+		</tr>
+	</tbody>
+</table>
+</form>
+
+		
+	
