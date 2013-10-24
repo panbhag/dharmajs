@@ -13,17 +13,15 @@
  	     }); 
          
 
-        this.get("#/share_masters/new", function () {
-        	controllerCaller("ShareMasters","new",{params:this.params});				
+        this.get("#/photos", function () {
+        	controllerCaller("Photos","index",{params:this.params});				
         });
-		this.get("#/share_masters/:id/edit", function(){
-			controllerCaller("ShareMasters","edit",{params:this.params});
-		});
 		
     });
    
 
     $(function () {
+		//default routes
       app.run('#/photos');
     });
 
